@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan - Kelurahan Bugih</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .services-section {
+            padding: 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .search-bar {
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid #cbd5e1;
+            font-size: 1rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span>🏛️</span> Kelurahan Bugih
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="struktur.html">Struktur</a></li>
+                <li><a href="layanan.html" class="active">Layanan</a></li>
+                <li><a href="admin/login.html" class="btn-login">Login Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="services-section">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <h2 class="section-title">Layanan Mandiri</h2>
+            <p class="section-desc">Silakan pilih jenis surat yang ingin Anda ajukan.</p>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" id="serviceSearch" placeholder="Cari layanan (contoh: Domisili)...">
+        </div>
+
+        <div class="cards" id="serviceList">
+            <!-- Group A -->
+            <div class="card service-item" data-name="sktm tidak mampu">
+                <div class="card-icon">💰</div>
+                <h3>Surat Keterangan Tidak Mampu</h3>
+                <p>Untuk persayaratan beasiswa, kesehatan, dll.</p>
+                <a href="layanan/sktm.html" class="card-link">Buat Surat &rarr;</a>
+            </div>
+            <div class="card service-item" data-name="domisili tempat tinggal">
+                <div class="card-icon">🏠</div>
+                <h3>Surat Keterangan Domisili</h3>
+                <p>Keterangan alamat tempat tinggal saat ini.</p>
+                <a href="layanan/domisili.html" class="card-link">Buat Surat &rarr;</a>
+            </div>
+            <div class="card service-item" data-name="usaha bisnis">
+                <div class="card-icon">💼</div>
+                <h3>Surat Keterangan Usaha</h3>
+                <p>Untuk pengajuan kredit bank atau izin usaha.</p>
+                <a href="layanan/usaha.html" class="card-link">Buat Surat &rarr;</a>
+            </div>
+
+            <!-- Group B -->
+            <div class="card service-item" data-name="belum menikah status perkawinan">
+                <div class="card-icon">💍</div>
+                <h3>Surat Keterangan Belum Menikah</h3>
+                <p>Pernyataan status belum pernah menikah.</p>
+                <a href="layanan/belum-menikah.html" class="card-link">Buat Surat &rarr;</a>
+            </div>
+            <div class="card service-item" data-name="kematian baru meninggal">
+                <div class="card-icon">⚰️</div>
+                <h3>Surat Keterangan Kematian (Baru)</h3>
+                <p>Untuk pelaporan kematian yang baru terjadi.</p>
+                <a href="layanan/kematian-baru.html" class="card-link">Buat Surat &rarr;</a>
+            </div>
+            <div class="card service-item" data-name="kematian lama meninggal">
+                <div class="card-icon">📜</div>
+                <h3>Surat Keterangan Kematian (Lama)</h3>
+                <p>Untuk data kematian lampau (Administrasi).</p>
+                <a href="layanan/kematian-lama.html" class="card-link">Buat Surat &rarr;</a>
+            </div>
+
+            <!-- Group C -->
+            <div class="card service-item" data-name="beda data identitas">
+                <div class="card-icon">📝</div>
+                <h3>Surat Keterangan Beda Data</h3>
+                <p>Koreksi perbedaan nama/tgl lahir di dokumen.</p>
+                <a href="layanan/beda-data.html" class="card-link">Buat Surat &rarr;</a>
+            </div>
+            <div class="card service-item" data-name="berkelakuan baik skck">
+                <div class="card-icon">👍</div>
+                <h3>Surat Keterangan Berkelakuan Baik</h3>
+                <p>Pengantar untuk pembuatan SKCK kepolisian.</p>
+                <a href="layanan/berkelakuan-baik.html" class="card-link">Buat Surat &rarr;</a>
+            </div>
+
+            <!-- Group D (New) -->
+            <div class="card service-item" data-name="ahli waris keluarga">
+                <div class="card-icon">👨‍👩‍👧‍👦</div>
+                <h3>Surat Keterangan Ahli Waris</h3>
+                <p>Pernyataan ahli waris yang sah.</p>
+                <a href="layanan/ahli-waris.html" class="card-link">Buat Surat &rarr;</a>
+            </div>
+            <div class="card service-item" data-name="pindah datang masuk">
+                <div class="card-icon">🚚</div>
+                <h3>Surat Keterangan Pindah Datang</h3>
+                <p>Untuk warga yang baru pindah masuk.</p>
+                <a href="layanan/pindah-datang.html" class="card-link">Buat Surat &rarr;</a>
+            </div>
+            <div class="card service-item" data-name="pindah keluar">
+                <div class="card-icon">📦</div>
+                <h3>Surat Keterangan Pindah Keluar</h3>
+                <p>Pengantar pindah domisili ke daerah lain.</p>
+                <a href="layanan/pindah-keluar.html" class="card-link">Buat Surat &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Kelurahan Bugih</h3>
+                <p>Kecamatan Pamekasan, Kabupaten Pamekasan<br>Jawa Timur, Indonesia.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigasi</h3>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="layanan.html">Layanan</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kontak</h3>
+                <p>Email: kel-bugih@pamekasankab.go.id</p>
+                <p>Telp: (0851) 8464-6308</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Pemerintah Kelurahan Bugih. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Simple search functionality
+        document.getElementById('serviceSearch').addEventListener('input', function (e) {
+            const term = e.target.value.toLowerCase();
+            const items = document.querySelectorAll('.service-item');
+
+            items.forEach(item => {
+                const name = item.getAttribute('data-name');
+                const title = item.querySelector('h3').textContent.toLowerCase();
+                if (name.includes(term) || title.includes(term)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

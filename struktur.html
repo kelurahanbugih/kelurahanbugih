@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struktur Organisasi - Kelurahan Bugih</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .org-section {
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .org-level {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .org-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            width: 250px;
+            text-align: center;
+            border-top: 4px solid var(--accent-color);
+            position: relative;
+        }
+
+        /* Connector lines (Simple Implementation) */
+        .level-1::after {
+            content: '';
+            position: absolute;
+            bottom: -3rem;
+            left: 50%;
+            width: 2px;
+            height: 3rem;
+            background: #cbd5e1;
+        }
+
+        .org-img {
+            width: 80px;
+            height: 80px;
+            background-color: #e2e8f0;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .org-name {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.2rem;
+        }
+
+        .org-role {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span>🏛️</span> Kelurahan Bugih
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="struktur.html" class="active">Struktur</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="admin/login.html" class="btn-login">Login Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="org-section container">
+        <h2 class="section-title">Struktur Organisasi</h2>
+        <p class="section-desc">Pemerintah Kelurahan Bugih</p>
+
+        <!-- Level 1: Lurah -->
+        <div class="org-level">
+            <div class="org-card level-1">
+                <div class="org-name">[Nama Lurah]</div>
+                <div class="org-role">Lurah</div>
+            </div>
+        </div>
+
+        <!-- Level 2: Seklur -->
+        <div class="org-level">
+            <div class="org-card level-1">
+                <div class="org-name">[Nama Seklur]</div>
+                <div class="org-role">Sekretaris Kelurahan</div>
+            </div>
+        </div>
+
+        <!-- Level 3: Kasi -->
+        <div class="org-level">
+            <div class="org-card">
+                <div class="org-name">[Nama Kasi]</div>
+                <div class="org-role">Kasi Pemerintahan</div>
+            </div>
+            <div class="org-card">
+                <div class="org-name">[Nama Kasi]</div>
+                <div class="org-role">Kasi Pembangunan</div>
+            </div>
+            <div class="org-card">
+                <div class="org-name">[Nama Kasi]</div>
+                <div class="org-role">Kasi Kesra</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Kelurahan Bugih</h3>
+                <p>Kecamatan Pamekasan, Kabupaten Pamekasan<br>Jawa Timur, Indonesia.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigasi</h3>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="layanan.html">Layanan</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kontak</h3>
+                <p>Email: kel-bugih@pamekasankab.go.id</p>
+                <p>Telp: (0851) 8464-6308</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Pemerintah Kelurahan Bugih. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

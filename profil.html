@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Kelurahan Bugih</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .profile-section {
+            padding: 4rem 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .profile-content {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .profile-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .profile-content p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .visi-misi {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .visi-misi {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span>🏛️</span> Kelurahan Bugih
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html" class="active">Profil</a></li>
+                <li><a href="struktur.html">Struktur</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="admin/login.html" class="btn-login">Login Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="profile-section">
+        <div class="profile-content">
+            <h2>Sejarah Kelurahan</h2>
+            <p>Kelurahan Bugih merupakan salah satu kelurahan yang terletak di Kecamatan Pamekasan, Kabupaten Pamekasan, Provinsi Jawa Timur, dengan kode pos 69316. 
+               Kelurahan ini berfungsi sebagai pusat pelayanan pemerintahan tingkat kelurahan yang melayani berbagai kebutuhan administrasi masyarakat setempat.
+</p>
+        </div>
+
+        <div class="visi-misi">
+            <div class="profile-content">
+                <h2>Visi</h2>
+                <p>"Terwujudnya Kelurahan Bugih yang Maju, Aman, dan Sejahtera melalui Pelayanan Publik yang Prima dan
+                    Transparan."</p>
+            </div>
+            <div class="profile-content">
+                <h2>Misi</h2>
+                <ul style="list-style: disc; margin-left: 1.5rem;">
+                    <li>Meningkatkan kualitas pelayanan administrasi kependudukan.</li>
+                    <li>Mewujudkan tata kelola pemerintahan yang bersih dan akuntabel.</li>
+                    <li>Meningkatkan partisipasi masyarakat dalam pembangunan kelurahan.</li>
+                    <li>Menciptakan lingkungan yang aman, tertib, dan nyaman.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Kelurahan Bugih</h3>
+                <p>Kecamatan Pamekasan, Kabupaten Pamekasan<br>Jawa Timur, Indonesia.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigasi</h3>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="layanan.html">Layanan</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kontak</h3>
+                <p>Email: kel-bugih@pamekasankab.go.id</p>
+                <p>Telp: (0851) 8464-6308</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Pemerintah Kelurahan Bugih. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Keterangan Usaha - Kelurahan Bugih</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .form-section {
+            padding: 4rem 5%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-container {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #cbd5e1;
+            border-radius: var(--radius);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .btn-submit:hover {
+            background: #1e293b;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><span>🏛️</span> Bugih</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="../layanan.html" class="active">Layanan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="form-section">
+        <div class="form-container">
+            <h2 style="margin-bottom: 1rem; color: var(--primary-color);">Formulir Surat Keterangan Usaha</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-light);">Isi data berikut untuk mengajukan SKU.</p>
+
+            <form id="serviceForm">
+                <h3 style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--accent-color);">Data Pemohon</h3>
+                <div class="form-group">
+                    <label>NIK</label>
+                    <input type="number" required placeholder="16 digit NIK">
+                </div>
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" required placeholder="Sesuai KTP">
+                </div>
+                <div class="form-group">
+                    <label>Alamat Rumah</label>
+                    <textarea rows="3" required placeholder="Alamat lengkap sesuai KTP"></textarea>
+                </div>
+
+                <h3 style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--accent-color); margin-top: 2rem;">Data
+                    Usaha</h3>
+                <div class="form-group">
+                    <label>Nama Usaha</label>
+                    <input type="text" required placeholder="Contoh: Toko Barokah">
+                </div>
+                <div class="form-group">
+                    <label>Jenis Usaha</label>
+                    <input type="text" required placeholder="Contoh: Kelontong, Makanan, Jasa">
+                </div>
+                <div class="form-group">
+                    <label>Alamat Lokasi Usaha</label>
+                    <textarea rows="3" required placeholder="Alamat lengkap tempat usaha"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Lama Berdiri (Tahun)</label>
+                    <input type="number" required placeholder="Contoh: 2">
+                </div>
+
+                <h3 style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--accent-color); margin-top: 2rem;">
+                    Dokumen Pendukung</h3>
+                <div class="form-group">
+                    <label>Foto KTP</label>
+                    <input type="file" accept="image/*,.pdf" required>
+                </div>
+                <div class="form-group">
+                    <label>Foto Lokasi Usaha</label>
+                    <input type="file" accept="image/*,.pdf" required>
+                </div>
+                <div class="form-group">
+                    <label>Surat Pengantar RT/RW</label>
+                    <input type="file" accept="image/*,.pdf" required>
+                </div>
+
+                <button type="submit" class="btn-submit">Kirim Permohonan</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.getElementById('serviceForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Permohonan SKU berhasil dikirim! Petugas akan memverifikasi data Anda.');
+            window.location.href = '../index.html';
+        });
+    </script>
+</body>
+
+</html>

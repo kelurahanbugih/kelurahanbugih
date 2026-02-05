@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Keterangan Kematian (Baru) - Kelurahan Bugih</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .form-section {
+            padding: 4rem 5%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-container {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #cbd5e1;
+            border-radius: var(--radius);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .btn-submit:hover {
+            background: #1e293b;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><span>🏛️</span> Bugih</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="../layanan.html" class="active">Layanan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="form-section">
+        <div class="form-container">
+            <h2 style="margin-bottom: 1rem; color: var(--primary-color);">Lapor Kematian (Baru)</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-light);">Untuk kematian yang baru terjadi (Segera Lapor).
+            </p>
+
+            <form id="serviceForm">
+                <h3 style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--accent-color);">Data Almarhum/Almarhumah
+                </h3>
+                <div class="form-group">
+                    <label>NIK</label>
+                    <input type="number" required placeholder="16 digit NIK">
+                </div>
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" required placeholder="Sesuai KTP">
+                </div>
+                <div class="form-group">
+                    <label>Tanggal Kematian</label>
+                    <input type="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Jam Kematian</label>
+                    <input type="time" required>
+                </div>
+                <div class="form-group">
+                    <label>Tempat Kematian</label>
+                    <input type="text" required placeholder="Contoh: RSUD Pamekasan / Rumah">
+                </div>
+                <div class="form-group">
+                    <label>Penyebab Kematian</label>
+                    <input type="text" required placeholder="Contoh: Sakit Tua / Kecelakaan">
+                </div>
+
+                <h3 style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--accent-color); margin-top: 2rem;">Data
+                    Pelapor</h3>
+                <div class="form-group">
+                    <label>Nama Pelapor</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Hubungan dengan Almarhum</label>
+                    <input type="text" required placeholder="Contoh: Anak Kandung / Istri">
+                </div>
+                <div class="form-group">
+                    <label>NIK Pelapor</label>
+                    <input type="number" required>
+                </div>
+
+                <h3 style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--accent-color); margin-top: 2rem;">
+                    Dokumen Pendukung</h3>
+                <div class="form-group">
+                    <label>Foto KTP Almarhum</label>
+                    <input type="file" accept="image/*,.pdf" required>
+                </div>
+                <div class="form-group">
+                    <label>Foto KK Almarhum</label>
+                    <input type="file" accept="image/*,.pdf" required>
+                </div>
+                <div class="form-group">
+                    <label>Surat Keterangan Rumah Sakit (Jika ada)</label>
+                    <input type="file" accept="image/*,.pdf">
+                </div>
+                <div class="form-group">
+                    <label>Foto KTP Pelapor</label>
+                    <input type="file" accept="image/*,.pdf" required>
+                </div>
+
+                <button type="submit" class="btn-submit">Kirim Laporan</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.getElementById('serviceForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Laporan Kematian berhasil dikirim! Petugas akan memverifikasi data Anda.');
+            window.location.href = '../index.html';
+        });
+    </script>
+</body>
+
+</html>
