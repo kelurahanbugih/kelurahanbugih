@@ -1,10 +1,16 @@
 :root {
-    --primary-color: #0f172a; /* Slate 900 */
-    --secondary-color: #f59e0b; /* Amber 500 */
-    --accent-color: #3b82f6; /* Blue 500 */
-    --bg-light: #f8fafc; /* Slate 50 */
-    --text-dark: #1e293b; /* Slate 800 */
-    --text-light: #64748b; /* Slate 500 */
+    --primary-color: #0f172a;
+    /* Slate 900 */
+    --secondary-color: #f59e0b;
+    /* Amber 500 */
+    --accent-color: #3b82f6;
+    /* Blue 500 */
+    --bg-light: #f8fafc;
+    /* Slate 50 */
+    --text-dark: #1e293b;
+    /* Slate 800 */
+    --text-light: #64748b;
+    /* Slate 500 */
     --white: #ffffff;
     --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --radius: 0.5rem;
@@ -71,7 +77,8 @@ header {
     transition: var(--transition);
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--accent-color);
 }
 
@@ -240,4 +247,59 @@ footer {
     border-top: 1px solid #334155;
     padding-top: 2rem;
     font-size: 0.9rem;
+}
+
+/* Mobile Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
 }

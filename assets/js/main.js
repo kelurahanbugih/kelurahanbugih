@@ -14,5 +14,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // TODO: Mobile menu toggle implementation
+    // Mobile menu toggle implementation
+    const hamburger = document.querySelector('.hamburger');
+    const navLinksContainer = document.querySelector('.nav-links');
+
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinksContainer.classList.toggle('active');
+        });
+    }
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click', () => {
+        if(hamburger && navLinksContainer.classList.contains('active')){
+             hamburger.classList.remove('active');
+             navLinksContainer.classList.remove('active');
+        }
+    }));
 });
